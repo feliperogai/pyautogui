@@ -13,7 +13,7 @@ try:
     while True:
         clicar_na_posicao()
         # Espera 15 minutos (900 segundos) antes de realizar o próximo clique
-        time.sleep(900)
+        time.sleep(10)
 except KeyboardInterrupt:
     print("\nPrograma interrompido pelo usuário.")
 except Exception as e:

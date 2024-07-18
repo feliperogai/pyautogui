@@ -1,7 +1,10 @@
 import pyautogui
 
-# Define a posição (x, y) onde o clique será realizado
-x, y = 1050, 315
-
-# Realiza um clique na posição (x, y)
-pyautogui.click(x, y)
+try:
+    while True:
+        x, y = pyautogui.position()
+        position_str = 'X: ' + str(x).rjust(4) + ' Y: ' + str(y).rjust(4)
+        print(position_str, end='')
+        print('\b' * len(position_str), end='', flush=True)  # Clear previous position
+except KeyboardInterrupt:
+    print('\nDone.')
